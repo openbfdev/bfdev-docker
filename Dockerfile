@@ -1,6 +1,6 @@
 FROM alpine
 WORKDIR /root
-RUN apk --update add musl-dev git cmake make gcc && \
+RUN apk --update add musl-dev bash git cmake make gcc && \
     git clone https://github.com/openbfdev/bfdev.git && \
     cd bfdev && \
     cmake -Bbuild -DBFDEV_EXAMPLES=ON -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release && \
